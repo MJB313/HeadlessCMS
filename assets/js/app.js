@@ -69,7 +69,7 @@ function renderRecipes(data) {
             resultEl.innerHTML += `
             <article>
                 <h2>${recipe.title.rendered}</h2>
-                ${recipe.content.rendered}
+                <p>${recipe.content.rendered}</p>
             </article>
             `;
         })
