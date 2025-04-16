@@ -54,7 +54,7 @@ async function getToken(){
 
 async function getPublicRecipes(){
 
-    const res = await fetch(domain + postsEndpoint);
+    const res = await fetch(domain + postsEndpoint + "?per_page=100");
     const recipes = await res.json();
     return recipes;
 
