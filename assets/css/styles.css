@@ -69,6 +69,29 @@ h1,h2,h3,h4,h5,h6 {
 
 /* FORSIDE STYLES HER */
 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    background-color: red;
+    width: 100%;
+
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#logo{
+    font-size: var(--fs-h2);
+    font-family: "Lora", serif;
+}
 
 
 
