@@ -3,10 +3,21 @@ const postsEndpoint = "wp-json/wp/v2/posts";
 const getRealImageUrls = "?acf_format=standard";
 const authEndpoint = "wp-json/jwt-auth/v1/token";
 
+fetch('https://mmd2.jqt-website.com/wp-json/wp/v2/svaerhedsgradtid')
+
+  .then(response => response.json())
+
+  .then(svaerhedsgradtid => {
+
+    console.log(svaerhedsgradtid);
+
+  });
+ 
+
 
 //fanger til DOM Manipulation
 
-const resultEl = document.querySelector(".results")
+const resultEl = document.querySelector(".recipeCard")
 
 init();
 
@@ -67,10 +78,12 @@ function renderRecipes(data) {
         data.forEach(recipe => {
             console.log('recipe:', recipe)
             resultEl.innerHTML += `
-            <article>
-                <h2>${recipe.title.rendered}</h2>
-                ${recipe.content.rendered}
-            </article>
+          <div>
+            <img src="${recipe.acf.opskrift_billede.url}" alt="${recipe.acf.opskrift_billede.alt}">
+            <i class="fa-solid fa-heart"></i>
+            <p>${recipe.acf.varighed_i_minutter} | Sværhedsgrad: ${recipe.acf.svaerhedsgrad}</p>
+            <h3>${recipe.acf.titel}</h3>
+          </div>
             `;
         })
     } else {
@@ -81,3 +94,11 @@ function renderRecipes(data) {
             </article>`
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('fa-heart')) {
+      e.target.classList.toggle('liked');
+    }
+  });
+});

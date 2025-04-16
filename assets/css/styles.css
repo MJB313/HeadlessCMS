@@ -11,6 +11,7 @@
     /* Farver */
     --lightOrange: #FFB365;
     --darkOrange: #ECA55D;
+    --lightGray: #565656;
 
     /* Spacere */
     --generalSpacer: 90px;
@@ -292,31 +293,142 @@ ul{
 
 /* OPSKRIFT OVERSIGT STYLES HER */
 
+ul.breadcrumb {
+    padding: 1rem var(--generalSpacer);
+    list-style: none;
+    background-color: white;
+    background-color: var(--darkOrange);
+    justify-content: start;
+    width: 100%;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: var(--fs-text);
+}
+
+ul.breadcrumb li+li:before {
+    padding: 1rem;
+    color: white;
+    content: ">\00a0";
+}
+
+ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb li:last-child a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.breadcrumb li:first-child a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 .opskrift_intro {
-    padding: var(--generalSpacer);
+    padding-inline: var(--generalSpacer);
     background-color: var(--lightOrange);
-    /* display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 2; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.opskrift_intro div {
+    padding-block: 4rem;
 }
 
 .opskrift_intro h1 {
     font-size: var(--fs-h1);
     color: white;
+    margin-bottom: 3rem;
+    
 }
 
 .opskrift_intro p {
     font-size: var(--fs-text);
-    /* width: 65ch; */
     color: white;
+    margin-block: 1rem;
+    width: 52ch;
 }
 
 .opskrift_intro img {
-    width: 150px;
+    width: 100%;
+    height: auto;
+    padding-block: 2rem;
 }
 
-.opskrift_intro p, img {
+.results {
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+
+.searchbar {
     display: flex;
+    justify-content: end;
+    padding-right: var(--generalSpacer);
+    margin-top: 3rem;
+    border-radius: 2rem;
+}
+
+.recipeCard img {
+    width: 270px;
+    height: 175px;
+    object-fit: cover;
+}
+
+
+.fa-heart {
+    position: absolute;
+    right: 60px;
+    top: 5px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+
+.fa-heart.liked {
+    color: red;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.recipeCard {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    float: right;
+}
+
+.recipeCard div {
+    position: relative;
+}
+
+.recipeCard p {
+    color: var(--lightGray);
+    font-size: var(--fs-cardDetails);
+}
+
+.recipeCard h3 {
+    font-size: var(--fs-cardTitle);
+    margin-bottom: 0.5rem;
 }
 
 
