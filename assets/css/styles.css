@@ -760,6 +760,13 @@ a:hover{
 .inspirationIntroBox>figcaption>p{
     font-size: var(--fs-text);
     max-width: 720px;
+    line-height: 150%;
+}
+
+.inspirationIntroBox>figure>img{
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
 }
 
 
@@ -788,6 +795,7 @@ padding: var(--generalSpacer);
     font-size: var(--fs-text);
     margin-top: 1rem;
     max-width: 720px;
+    line-height: 150%;
 }
 
 .inspirationInfoSection>figcaption>h2{
@@ -804,7 +812,7 @@ padding: var(--generalSpacer);
 }
 
 .inspirationCard{
-    max-width: 220px;
+    max-width: 250px;
     border-radius: 6px;
     background-color: var(--darkOrange);
     color: white;
@@ -812,15 +820,16 @@ padding: var(--generalSpacer);
 }
 
 .inspirationCard>p{
-    padding: .5rem;
-    width: 220px;
-    height: 64px;   
+    padding: .3rem;
+    width: 250px;
+    height: 70px;   
+    font-size: var(--fs-text);
 }
 
 
 .inspirationCard>img{
-    width: 220px;
-    height: 240px;
+    width: 250px;
+    height: 280px;
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;
     object-fit: cover;
@@ -1060,6 +1069,13 @@ a:hover {
     max-width: 40rem;
     line-height: 150%;
     font-size: var(--fs-text);
+}
+
+.omOsIntroBox>figure>img{
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
+    object-position: 100% bottom;
 }
 
 
