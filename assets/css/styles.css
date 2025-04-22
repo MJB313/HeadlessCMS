@@ -428,13 +428,16 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
+
 .recipeCard {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     float: right;
+    max-height: 200px;
 }
+
 
 .recipeCard div {
     position: relative;

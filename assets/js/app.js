@@ -5,7 +5,7 @@ const resultEl = document.querySelector(".recipeCard");
 
 const filterConfig = {
   svaerhedsgrad:      { path: "acf.svaerhedsgrad",       type: "string" },
-  svaerhedsgradtid:   { path: "svaerhedsgradtid",        type: "array"  }, // taxonomy array
+  svaerhedsgradtid:   { path: "svaerhedsgradtid",        type: "array"  },
   maltidstypefase:    { path: "maltidstypefase",         type: "array"  },
   sortering:          { path: "sortering",               type: "array"  },
   cuisine:            { path: "cuisine",                 type: "array"  },
@@ -54,11 +54,21 @@ function renderRecipes(recipes) {
   recipes.forEach(r => {
     resultEl.innerHTML += `
       <div class="recipe">
-        <img src="${r.acf?.opskrift_billede?.url||""}" alt="${r.acf?.opskrift_billede?.alt||""}">
+        ${r.acf?.opskrift_billede?.url ? `<img src="${r.acf.opskrift_billede.url}" alt="${r.acf.opskrift_billede.alt || ""}">` : ""}
         <i class="fa-solid fa-heart"></i>
-        <p>${r.acf?.varighed_i_minutter||""} | Sværhedsgrad: ${r.acf?.svaerhedsgrad||""}</p>
-        <h3>${r.acf?.titel||""}</h3>
+        <p>${r.acf?.varighed_i_minutter || ""} | Sværhedsgrad: ${r.acf?.svaerhedsgrad || ""}</p>
+        <h3>${r.acf?.titel || ""}</h3>
       </div>`;
+  });
+  removeEmptyCards();
+}
+
+function removeEmptyCards() {
+  const allCards = document.querySelectorAll(".recipe");
+  allCards.forEach(card => {
+    if (!card.textContent.trim() || card.innerHTML.trim() === "") {
+      card.remove();
+    }
   });
 }
 
@@ -106,7 +116,7 @@ function applyFilters(filters) {
       const { path, type } = filterConfig[key];
       const data = getNestedValue(recipe, path);
 
-      // **Special case**: only match first element of array
+      // Special case: only check first element of svaerhedsgradtid
       if (key === "svaerhedsgradtid") {
         const first = Array.isArray(data) ? data[0] : null;
         return first != null && vals.includes(first);
@@ -123,7 +133,6 @@ function applyFilters(filters) {
   });
 }
 
-// Optional: heart toggle
 document.addEventListener("click", e => {
   if (e.target.classList.contains("fa-heart")) {
     e.target.classList.toggle("liked");
