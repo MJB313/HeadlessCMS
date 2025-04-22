@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Opskrift oversigt | Madkompasset</title>
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/data.js" defer></script>
+    <script type="module" src="./assets/js/app.js" defer></script>
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
@@ -13,7 +14,7 @@
     <main>
       <ul class="breadcrumb">
         <li><a href=".//index.html">Forside</a></li>
-        <li><a href=".//opskriftOversigt.html">Opskrifter</a></li>
+        <li><a href=".//opskriftOversigt.html">Opskrift oversigt</a></li>
       </ul>
       <section class="opskrift_intro">
         <div>
@@ -30,11 +31,143 @@
       
       <div class="searchbar">
         <input type="search" id="search" name="search" placeholder="søg...">
-        <button>søg</button>
+        <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 
     
       <section class="results">
+
+        <aside>
+          <div>
+            <h3>Filtrér</h3>
+            <h4>Måltidstyper/faser</h4>
+            <label for="Morgenmad">
+              <input type="checkbox" name="Morgenmad" value="Morgenmad" id="10"> Morgenmad  
+            </label>
+            <label for="Frokost">
+              <input type="checkbox" name="Frokost" value="Frokost" id="11"> Frokost  
+            </label>
+            <label for="Aftensmad">
+              <input type="checkbox" name="Aftensmad" value="Aftensmad" id="12"> Aftensmad  
+            </label>
+            <label for="Forret">
+              <input type="checkbox" name="Forret" value="Forret" id="13"> Forret  
+            </label>
+            <label for="Hovedret">
+              <input type="checkbox" name="Hovedret" value="Hovedret" id="14"> Hovedret  
+            </label>
+            <label for="Dessert">
+              <input type="checkbox" name="Dessert" value="Dessert" id="15"> Dessert  
+            </label>
+
+            <h4>Sværhedsgrad og tid</h4>
+            <label for="Begynder">
+              <input type="checkbox" name="Begynder" value="Begynder" id="16"> Begynder  
+            </label>
+            <label for="Moderat">
+              <input type="checkbox" name="Moderat" value="Moderat" id="17"> Moderat  
+            </label>
+            <label for="Avanceret">
+              <input type="checkbox" name="Avanceret" value="Avanceret" id="18"> Avanceret  
+            </label>
+            <label for="0-30 min">
+              <input type="checkbox" name="0-30 min" value="0-30 min" id="19"> 0-30 min  
+            </label>
+            <label for="30-60 min">
+              <input type="checkbox" name="30-60 min" value="30-60 min" id="20"> 30-60 min  
+            </label>
+            <label for="60 min+">
+              <input type="checkbox" name="60 min+" value="60 min+" id="21"> 60 min+  
+            </label>
+
+            <h4>Sortering</h4>
+            <label for="Bedst bedømte">
+              <input type="checkbox" name="Bedst bedømte" value="Bedst bedømte" id="22"> Bedst bedømte  
+            </label>
+            <label for="Mest populære">
+              <input type="checkbox" name="Mest populære" value="Mest populære" id="23"> Mest populære  
+            </label>
+            <label for="Nyeste">
+              <input type="checkbox" name="Nyeste" value="Nyeste" id="24"> Nyeste  
+            </label>
+
+            <h4>Cuisine</h4>
+            <label for="Amerikansk">
+              <input type="checkbox" name="Amerikansk" value="Amerikansk" id="25"> Amerikansk  
+            </label>
+            <label for="Engelsk">
+              <input type="checkbox" name="Engelsk" value="Engelsk" id="28"> Engelsk  
+            </label>
+            <label for="Fransk">
+              <input type="checkbox" name="Fransk" value="Fransk" id="32"> Fransk  
+            </label>
+            <label for="Indisk">
+              <input type="checkbox" name="Indisk" value="Indisk" id="29"> Indisk  
+            </label>
+            <label for="Italiensk">
+              <input type="checkbox" name="Italiensk" value="Italiensk" id="34"> Italiensk  
+            </label>
+            <label for="Japansk">
+              <input type="checkbox" name="Japansk" value="Japansk" id="30"> Japansk  
+            </label>
+            <label for="Kinesisk">
+              <input type="checkbox" name="Kinesisk" value="Kinesisk" id="33"> Kinesisk  
+            </label>
+            <label for="Mexicansk">
+              <input type="checkbox" name="Mexicansk" value="Mexicansk" id="26"> Mexicansk  
+            </label>
+            <label for="Spansk">
+              <input type="checkbox" name="Spansk" value="Spansk" id="31"> Spansk  
+            </label>
+            <label for="Svensk">
+              <input type="checkbox" name="Svensk" value="Svensk" id="35"> Svensk  
+            </label>
+            <label for="Thai">
+              <input type="checkbox" name="Thai" value="Thai" id="27"> Thai  
+            </label>
+       
+            <h4>Kost Præference</h4>
+            <label for="Canivore">
+              <input type="checkbox" name="Canivore" value="Canivore" id="40"> Canivore  
+            </label>
+            <label for="Halal">
+              <input type="checkbox" name="Halal" value="Halal" id="42"> Halal  
+            </label>
+            <label for="Helse">
+              <input type="checkbox" name="Helse" value="Helse" id="41"> Helse  
+            </label>
+            <label for="Omnivore">
+              <input type="checkbox" name="Omnivore" value="Omnivore" id="36"> Omnivore  
+            </label>
+            <label for="Pesktarisk">
+              <input type="checkbox" name="Pesktarisk" value="Pesktarisk" id="39"> Pesktarisk  
+            </label>
+            <label for="Vegansk">
+              <input type="checkbox" name="Vegansk" value="Vegansk" id="37"> Vegansk  
+            </label>
+            <label for="Vegetarisk">
+              <input type="checkbox" name="Vegetarisk" value="Vegetarisk" id="38"> Vegetarisk  
+            </label>
+       
+ 
+ 
+            <h4>Allergener</h4>
+            <label for="Glutenfri">
+              <input type="checkbox" name="Glutenfri" value="Glutenfri" id="43"> Glutenfri  
+            </label>
+            <label for="Laktosefri">
+              <input type="checkbox" name="Laktosefri" value="Laktosefri" id="44"> Laktosefri  
+            </label>
+            <label for="Mælkefri">
+              <input type="checkbox" name="Mælkefri" value="Mælkefri" id="45"> Mælkefri  
+            </label>
+            <label for="Nøddefri">
+              <input type="checkbox" name="Nøddefri" value="Nøddefri" id="46"> Nøddefri  
+            </label>
+
+
+          </div>
+        </aside>
 
 
         <section class="recipeCard">
@@ -42,8 +175,8 @@
             <img src="" alt="">
             <i class="fa-solid fa-heart white-heart"></i>
             <i class="fa-solid fa-heart red-heart"></i>
-            <p>Skyd mig i hovedet</p>
-            <h3>Skyd mig i hovedet igen</h3>
+            <p></p>
+            <h3></h3>
           </div> -->
         </section>
       </section>
