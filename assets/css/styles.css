@@ -811,8 +811,6 @@ padding: var(--generalSpacer);
     box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .inspirationCard>p{
     padding: .5rem;
     width: 220px;
@@ -1028,7 +1026,8 @@ padding: var(--generalSpacer);
 .sideviser>p>a {
     color: white;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -1049,7 +1048,7 @@ a:hover {
     color: white;
     background-color: #FFB365;
     height: 500px;
-    
+
 }
 
 .omOsIntroBox>figcaption>h1 {
@@ -1085,22 +1084,22 @@ a:hover {
     font-size: var(--fs-text);
 }
 
-.omOsKontaktSection{
-display: flex;
-justify-content: space-between;
-margin: var(--generalSpacer);
-text-align: center;
+.omOsKontaktSection {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--generalSpacer);
+    text-align: center;
 }
 
-.omOsKontaktCard>img{
+.omOsKontaktCard>img {
     margin-bottom: 1rem;
 }
 
-.omOsKontaktCard>p{
+.omOsKontaktCard>p {
     color: grey;
 }
 
-.omOsKontaktCard>p>a{
+.omOsKontaktCard>p>a {
     color: grey;
 }
 
