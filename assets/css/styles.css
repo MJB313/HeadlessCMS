@@ -1,892 +1,337 @@
 /* TYPOGRAPHY */
 /* ___________________________________ */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
 /* VARIABLES */
 /* ___________________________________ */
 :root {
+  /* Farver */
+  --lightOrange: #ffb365;
+  --darkOrange: #eca55d;
 
-    /* Farver */
-    --lightOrange: #FFB365;
-    --darkOrange: #ECA55D;
+  /* Spacere */
+  --generalSpacer: 90px;
+  --largeSpacer: 180px;
 
-    /* Spacere */
-    --generalSpacer: 90px;
-    --largeSpacer: 180px;
-
-
-    /* font sizes */
-    --fs-cardDetails: 0.875rem;
-    --fs-cardTitle: 1.5rem;
-    --fs-breadcrumbs: 1.25rem;
-    --fs-text: 1.25rem;
-    --fs-h1: 4rem;
-    --fs-h2: 2.25rem;
-
+  /* font sizes */
+  --fs-cardDetails: 0.875rem;
+  --fs-cardTitle: 1.5rem;
+  --fs-breadcrumbs: 1.25rem;
+  --fs-text: 1.25rem;
+  --fs-h1: 4rem;
+  --fs-h2: 3rem;
 }
-
 
 /* GENERAL STYLING */
 /* ___________________________________ */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    line-height: 150%;
+  font-family: "Lato", sans-serif;
+  line-height: 150%;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Lora", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FORSIDE STYLES HER */
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 3rem;
-    background-color: red;
-    width: 100%;
-
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem var(--generalSpacer);
+  width: 100%;
 }
 
-ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 60%;
-    margin: 0 auto;
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: var(--fs-text);
 }
 
-#logo{
-    font-size: var(--fs-h2);
-    font-family: "Lora", serif;
+nav a:hover {
+  text-decoration: underline;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: var(--fs-h2);
+  font-family: "Lora", serif;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+header div {
+  width: 100px;
+  color: black;
+}
+
+header div img {
+  display: block;
+  width: 50px;
+  margin: 0 auto;
+}
+
+header div p {
+  text-align: center;
+}
+
+.heroVideo {
+  background-color: red;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.heroVideo video {
+  width: 100vw;
+  height: 85vh;
+  object-fit: cover;
+  object-position: top;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.heroVideo div {
+  grid-column: 1;
+  grid-row: 1;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2rem;
+  padding: 8rem;
+}
+
+.heroVideo h1 {
+  font-size: var(--fs-h1);
+  line-height: 120%;
+}
+
+.heroVideo p {
+  font-size: 2.5rem;
+}
+
+.forsideOpskriftsamling {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--lightOrange);
+  padding: 3rem var(--generalSpacer);
+  gap: 3rem;
+}
+
+.forsideOpskriftsamling img {
+  width: 100%;
+}
+
+.forsideOpskriftsamling h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.forsideOpskriftsamling p {
+  font-size: var(--fs-text);
+  line-height: 150%;
+  color: white;
+}
+
+.forsideCardWrapper {
+  background-color: var(--lightOrange);
+  width: 100%;
+  padding-inline: var(--generalSpacer);
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rem;
+}
+
+.forsideCardWrapper a {
+  text-decoration: none;
+}
+
+.forsideCardWrapper div {
+  width: 250px;
+  height: 350px;
+  background-color: var(--darkOrange);
+  border-radius: 6px;
+  box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.forsideCardWrapper img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 6px 6px 0 0;
+}
+
+.forsideCardWrapper p {
+  color: rgb(255, 255, 255);
+  font-size: var(--fs-cardTitle);
+  text-align: center;
+  align-content: center;
+}
+
+.forsideCardWrapper a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.forsideCTASektion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--generalSpacer) var(--largeSpacer);
+  gap: 4rem;
+}
+
+.forsideCTASektion img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.forsideCTASektion div {
+  display: grid;
+  align-content: space-between;
+}
+
+.forsideCTASektion h3 {
+  font-size: 42px;
+}
+
+.forsideCTASektion p {
+  font-size: var(--fs-text);
+  line-height: 150%;
+}
+
+.forsideCTASektion a {
+  display: block;
+  width: 60%;
+  margin: auto 0;
+  text-align: center;
+  padding-block: 2rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  background-color: var(--darkOrange);
+  font-size: var(--fs-text);
+  box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+}
+
+.forsideCTASektion a:hover {
+  text-decoration: underline;
+}
+
+.forsideCTASektion:nth-child(odd) {
+  background-color: var(--lightOrange);
+  color: white;
+}
+
+.forsideNyhedsbrev {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.forsideNyhedsbrev span {
+  font-size: 8rem;
+}
+
+.forsideNyhedsbrev p {
+  font-size: var(--fs-text);
+}
+
+.forsideNyhedsbrev div {
+  display: grid;
+  gap: 1rem;
+}
+
+#nyhedsbrev {
+  border-radius: 20px;
+  width: 400px;
+  padding: 0.5rem;
+}
+
+#submit {
+  display: block;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  padding-block: 1rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+  background-color: var(--darkOrange);
+  font-size: 1rem;
+  box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease-in-out;
+  border: none;
+}
+
+#submit:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--lightOrange);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem var(--generalSpacer);
+  margin-top: 3rem;
+  color: white;
+}
+
+.footerSider {
+  margin-bottom: 2rem;
+}
+
+.footerSocials {
+  margin-bottom: 2rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  padding-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer i {
+  font-size: 2rem;
+}
 
 /* OPSKRIFT OVERSIGT STYLES HER */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* OPSKRIFT STYLES HER */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* INSPIRATION STYLES HER */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* OM OS STYLES HER */

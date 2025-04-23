@@ -7,23 +7,226 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="./assets/js/app.js" defer></script>
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=mail"
+    />
   </head>
   <body>
     <header>
       <nav>
-        <p id="logo">Madkompasset</p>
-        <nav>
-          <ul>
-            <a href=""><li>Forside</li></a>
-            <a href=""><li>Opskrifter</li></a>
-           <a href=""><li>Inspiration</li></a>
-            <a href=""><li>Om os</li></a>
-          </ul>
-        </nav>
-       <i class="fa-regular fa-user"></i>
-       
+        <a href="index.html" class="logo"><p class="logo">Madkompasset</p></a>
+
+        <ul>
+          <a href="index.html"><li>Forside</li></a>
+          <a href="opskriftOversigt.html"><li>Opskrifter</li></a>
+          <a href="inspiration.html"><li>Inspiration</li></a>
+          <a href="omOs.html"><li>Om os</li></a>
+        </ul>
+
+        <a href="#">
+          <div>
+            <img src="./assets/images/Login ikon.png" alt="Login ikon" />
+            <p>Log in</p>
+          </div>
+        </a>
+      </nav>
     </header>
+
+    <main class="forsideMain">
+      <section class="heroVideo">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          src="./assets/videos/Familie madlavning.mp4"
+          alt="Video af har et gasblus der bliver tændt, en pande der bliver sat på og så en pige med hendes mor og far der klækker æg ud. Herefter, så kan man se pandekagedej blive sat på en pande og tilbage til den samme glade familie"
+        ></video>
+        <div>
+          <h1>
+            Velkommen til <br />
+            Madkompasset
+          </h1>
+          <p>Vi viser vejen, du laver maden.</p>
+        </div>
+      </section>
+
+      <section class="forsideOpskriftsamling">
+        <div class="forsideOpskriftsamlingHero">
+          <h2>Forårets opskrifter</h2>
+          <p>
+            Foråret er endelig kommet, og med det følger en helt særlig stemning
+            af fornyelse, friske råvarer, lyse aftener og en spirende lyst til
+            at nyde lette, farverige og smagfulde retter. Det er tiden, hvor
+            naturen vågner, blomsterne springer ud, og køkkenet igen fyldes med
+            duften af sprøde grøntsager, friske krydderurter og saftige frugter.
+            I denne opskriftsamling har vi samlet nogle af sæsonens allerbedste
+            forårsopskrifter – lige fra sprøde, grønne salater og varme, milde
+            supper til lette, luftige desserter og hjemmebagt bagværk med et
+            strejf af citrus, bær og friske smagsnoter. <br />
+            <br />
+            Uanset om du planlægger en hyggelig middag under åben himmel i
+            haven, et let frokostbord med vennerne eller bare vil lade dig
+            inspirere til nye idéer i køkkenet, finder du her masser af
+            muligheder for at fejre forårets friske, grønne og søde smage. Lad
+            dig inspirere af sæsonens bedste råvarer, og giv dine retter et
+            forårsfriskt twist, der passer perfekt til de lysere dage og varmere
+            aftener.
+          </p>
+        </div>
+
+        <img
+          src="./assets/images/Forårs opskriftsamling hero billede.jpg"
+          alt="Billed af en mor og datter, der har en kurv med grøntsager."
+        />
+      </section>
+      <section class="forsideCardWrapper">
+        <a href="#">
+          <div class="opskriftSamlingCard">
+            <img
+              src="./assets/images/Bedre chicken pot pie.png"
+              alt="Billede af Kylling pot pie"
+            />
+            <p>Bedre Kylling Potpie</p>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="opskriftSamlingCard">
+            <img
+              src="./assets/images/Marineret Cherry-tomatsalat.webp"
+              alt="Billede af marineret cherry-tomatsalat"
+            />
+            <p>marineret cherry-tomatsalat</p>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="opskriftSamlingCard">
+            <img
+              src="./assets/images/Spiral Grøntsagstærte.webp"
+              alt="Billede af Spiral Grøntsagtærte"
+            />
+            <p>Spiral Grøntsagtærte</p>
+          </div>
+        </a>
+
+        <a href="#">
+          <div class="opskriftSamlingCard">
+            <img
+              src="./assets/images/Ristede Grøntsagsnudler med Pærer.webp"
+              alt="Billede af Ristede grøntsags-nudler med Pærer"
+            />
+            <p>Ristede grøntsags-nudler med Pærer</p>
+          </div>
+        </a>
+      </section>
+
+      <section class="forsideCTASektion">
+        <div>
+          <h3>Find flere opskrifter</h3>
+          <p>
+            Er du gået i stå i køkkenet og mangler friske idéer til, hvad du
+            skal lave til aftensmad? Så er du kommet til det helt rette sted!
+            Her finder du masser af lækre opskrifter, smagfulde retter og
+            kreative idéer, der kan pifte hverdagsmaden op og gøre det sjovere
+            at lave mad – uanset om du er til hurtige hverdagsløsninger, grønne
+            og vegetariske retter eller weekendforkælelse med lidt ekstra. Gå på
+            opdagelse i vores mange opskrifter og lad dig inspirere til nye
+            favoritter!
+          </p>
+          <a href="opskriftOversigt.html">Besøg opskrift siden</a>
+        </div>
+
+        <img
+          src="./assets/images/Far og søn i køkken.jpg"
+          alt="Far og søn der står i køkkenet og laver mad"
+        />
+      </section>
+
+      <section class="forsideCTASektion">
+        <img
+          src="./assets/images/Overvejende mand.png"
+          alt="Mand der står og kigger overvejende"
+        />
+
+        <div>
+          <h3>Har du spørgsmål?</h3>
+          <p>
+            Har du spørgsmål, kommentarer eller idéer, du gerne vil dele med os?
+            Uanset om du har brug for hjælp til en opskrift, ønsker mere
+            information om vores produkter, eller blot vil give feedback, hører
+            vi meget gerne fra dig. Vi elsker at høre fra vores brugere, og din
+            mening betyder noget for os! Du er altid velkommen til at tage
+            kontakt — skriv en besked, fang os på mail, eller sig hej på vores
+            sociale medier. Vi svarer så hurtigt vi kan, og altid med et smil og
+            lysten til at hjælpe. Så tøv ikke med at række ud — vi glæder os til
+            at høre fra dig!
+          </p>
+          <a href="omOs.html">Besøg om os siden</a>
+        </div>
+      </section>
+
+      <section class="forsideCTASektion">
+        <div>
+          <h3>Find inspiration</h3>
+          <p>
+            Madinspiration kan komme alle vegne fra – en duft i luften, et
+            fristende billede, en opskrift online eller måske en oplevelse fra
+            en ferie, du vil genskabe derhjemme. En tur forbi kulinariske
+            hjørner, hvad enten det er på nettet, i en kogebog eller
+            supermarkedet, kan hurtigt vække lysten til at prøve noget nyt i
+            køkkenet. Det kan være en klassisk ret med et twist, en gammel
+            favorit i ny udgave eller noget helt anderledes. Det handler i bund
+            og grund om at få idéer, der gør madlavningen sjov, kreativ og fuld
+            af smagfulde oplevelser.
+          </p>
+          <a href="inspiration.html">Besøg inspirations siden</a>
+        </div>
+
+        <img
+          src="./assets/images/Overvejende dame find inspiration.png"
+          alt="Dame der sidder og kigger overvejende i en kogebog"
+        />
+      </section>
+
+      <section class="forsideNyhedsbrev">
+        <span class="material-symbols-outlined">mail</span>
+        <p>Få seneste nyt om opskrifter gennem vores nyhedsbrev</p>
+        <div>
+          <input type="email" id="nyhedsbrev" placeholder="Email:" required />
+          <input type="submit" id="submit" value="Tilmeld Nyhedsbrev" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footerSider">
+          <a href="omOs.html">Om os</a><a href="omOs.html">FAQ</a
+          ><a href="#">Cookies</a>
+        </div>
+        <p>All rights reserved to Group 6 TM</p>
+      </div>
+
+      <div>
+        <div class="footerSocials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Jankagevej 69, 9000 Aalborg, Janmark</p>
+      </div>
+    </footer>
   </body>
 </html>
