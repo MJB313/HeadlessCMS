@@ -551,14 +551,18 @@ document
   });
 
 
-  fetch('https://mmd2.jqt-website.com/wp-json/wp/v2/posts/134')
+fetch('https://mmd2.jqt-website.com/wp-json/wp/v2/posts/134')
   .then(response => response.json())
   .then(post => {
     console.log('Post data:', post);
     const difficulty = post.acf?.svaerhedsgrad || 'Ikke angivet';
     const timer = post.acf?.varighed_i_minutter || 'Ikke angivet';
-    
+    const imageUrl = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || '';
 
+
+    if (imageUrl) {
+    document.querySelector('.opskrift_intro img').src = imageUrl;
+    }
     const difficultyElement = document.querySelector('.opskrift_tid_span:nth-child(2)');
     difficultyElement.innerHTML = `
       <span class="material-icons">stairs</span> Sværhedsgrad: ${difficulty}`;
@@ -573,10 +577,9 @@ document
 
     // Sæt beskrivelse - her bruger jeg hele content (du kan evt. bruge excerpt hvis det findes)
     document.getElementById('recipe-description').innerHTML = post.excerpt.rendered || post.content.rendered;
-
-    // Evt. til fremgangsmåde og ingredienser - hvis du bruger ACF eller custom felter
-    // Du skal tilføje mere kode hvis du vil hente dem også
   })
+
   .catch(error => {
     console.error('Fejl ved hentning:', error);
   });
+
