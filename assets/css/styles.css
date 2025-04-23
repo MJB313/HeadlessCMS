@@ -291,6 +291,112 @@ ul{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* OPSKRIFT OVERSIGT STYLES HER */
 
 ul.breadcrumb {
@@ -391,6 +497,30 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
+.recipeCard {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    float: right;
+    max-height: 200px;
+}
+
+
+.recipeCard div {
+    position: relative;
+}
+
+.recipeCard p {
+    color: var(--lightGray);
+    font-size: var(--fs-cardDetails);
+}
+
+.recipeCard h3 {
+    font-size: var(--fs-cardTitle);
+    margin-bottom: 0.5rem;
+}
+
 .recipeCard img {
     width: 270px;
     height: 175px;
@@ -428,34 +558,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
-
-.recipeCard {
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    float: right;
-    max-height: 200px;
-}
-
-
-.recipeCard div {
-    position: relative;
-}
-
-.recipeCard p {
-    color: var(--lightGray);
-    font-size: var(--fs-cardDetails);
-}
-
-.recipeCard h3 {
-    font-size: var(--fs-cardTitle);
-    margin-bottom: 0.5rem;
-}
-
 aside {
     width: 20%;
-    /* display: grid; */
 }
 
 aside div {
@@ -472,6 +576,16 @@ aside h4 {
     margin-top: 1rem;
 }
 
+#reset {
+    background-color: var(--lightOrange);
+    color: white;
+    border: none;
+    padding-block: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    cursor: pointer;
+}
 
 
 
