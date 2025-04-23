@@ -9,9 +9,19 @@
   --lightOrange: #ffb365;
   --darkOrange: #eca55d;
 
-  /* Spacere */
-  --generalSpacer: 90px;
-  --largeSpacer: 180px;
+
+    /* Spacere */
+    --generalSpacer: 90px;
+    --largeSpacer: 180px;
+
+
+    /* font sizes */
+    --fs-cardDetails: 0.875rem;
+    --fs-cardTitle: 1.5rem;
+    --fs-breadcrumbs: 1.25rem;
+    --fs-text: 1.25rem;
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
 
   /* font sizes */
   --fs-cardDetails: 0.875rem;
@@ -1182,6 +1192,538 @@ footer i {
   text-decoration-color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* INSPIRATION STYLES HER */
 
+/* Sideviser styling */
+.sideviser{
+    padding-left: var(--generalSpacer);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: white;
+    background-color: var(--darkOrange);
+}
+
+.sideviser>p{
+    font-size: var(--fs-text);
+}
+
+.sideviser>p>a{
+    color: white;
+    font-size: var(--fs-text);
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* Intro section styling */
+.inspirationIntroBox{
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--generalSpacer);
+    padding-right: var(--generalSpacer);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    background-color: #FFB365;
+    height: 500px;
+}
+.inspirationIntroBox>figcaption>h1{
+    font-size: var(--fs-h1);
+    line-height: 150%;
+}
+
+.inspirationIntroBox>figcaption>p{
+    font-size: var(--fs-text);
+    max-width: 720px;
+    line-height: 150%;
+}
+
+.inspirationIntroBox>figure>img{
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
+}
+
+
+/* Styling af indhold */
+figure>img{
+    max-width: 620px;
+}
+
+figcaption{
+    margin-right: 2rem;
+}
+section.inspirationSection:nth-child(odd) {
+    background-color: var(--lightOrange);
+    color: white;
+}
+
+.inspirationSection{
+padding: var(--generalSpacer);
+}
+.inspirationInfoSection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inspirationInfoSection>figcaption>p{
+    font-size: var(--fs-text);
+    margin-top: 1rem;
+    max-width: 720px;
+    line-height: 150%;
+}
+
+.inspirationInfoSection>figcaption>h2{
+    font-size: var(--fs-h2);
+    line-height: 150%;
+}
+
+/* Styiling af cards */
+
+.inspirationCards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.inspirationCard{
+    max-width: 250px;
+    border-radius: 6px;
+    background-color: var(--darkOrange);
+    color: white;
+    box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inspirationCard>p{
+    padding: .3rem;
+    width: 250px;
+    height: 70px;   
+    font-size: var(--fs-text);
+}
+
+
+.inspirationCard>img{
+    width: 250px;
+    height: 280px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* OM OS STYLES HER */
+
+.sideviser {
+    padding-left: var(--generalSpacer);
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    color: white;
+    background-color: var(--darkOrange);
+}
+
+.sideviser>p>a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Intro section styling */
+.omOsIntroBox {
+    display: flex;
+    justify-content: space-between;
+    padding-left: var(--generalSpacer);
+    padding-right: var(--generalSpacer);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    background-color: #FFB365;
+    height: 500px;
+
+}
+
+.omOsIntroBox>figcaption>h1 {
+    font-size: var(--fs-h1);
+    line-height: 150%;
+}
+
+.omOsIntroBox>figcaption>p {
+    max-width: 40rem;
+    line-height: 150%;
+    font-size: var(--fs-text);
+}
+
+.omOsIntroBox>figure>img{
+    width: 620px;
+    height: 420px;
+    object-fit: cover;
+    object-position: 100% bottom;
+}
+
+
+/* Indhold styling */
+.omOsInfoSection {
+    display: flex;
+    justify-content: space-between;
+    margin-left: var(--generalSpacer);
+    margin-right: var(--generalSpacer);
+    margin-top: var(--generalSpacer);
+}
+
+.omOsInfoSection>figcaption>h2 {
+    font-size: var(--fs-h2);
+    line-height: 150%;
+    max-width: 500px;
+}
+
+.omOsInfoSection>figcaption>p {
+    max-width: 40rem;
+    margin-top: 1rem;
+    font-size: var(--fs-text);
+}
+
+.omOsKontaktSection {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--generalSpacer);
+    text-align: center;
+}
+
+.omOsKontaktCard>img {
+    margin-bottom: 1rem;
+}
+
+.omOsKontaktCard>p {
+    color: grey;
+}
+
+.omOsKontaktCard>p>a {
+    color: grey;
+}
+
+
+
+
+
+
+
+
