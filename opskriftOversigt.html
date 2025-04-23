@@ -11,10 +11,362 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
-    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo">
+          <p class="logo">Madkompasset</p>
+        </a>
+
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="opskriftOversigt.html">Opskrifter</a></li>
+          <li><a href="inspiration.html">Inspiration</a></li>
+          <li><a href="omOs.html">Om os</a></li>
+        </ul>
+
+        <a href="#">
+          <div>
+            <img src="./assets/images/Login_ikon.png" alt="Login ikon" />
+            <p>Log in</p>
+          </div>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <ul class="breadcrumb">
+        <li><a href=".//index.html">Forside</a></li>
+        <li><a href=".//opskriftOversigt.html">Opskrift oversigt</a></li>
+      </ul>
+
+      <section class="inspirationIntroBox">
+        <figure>
+          <figcaption>
+            <h1>Opskrifter </h1>
+            <p>
+            Velkommen til vores opskriftsunivers med alt fra hurtige hverdagsretter og hyggelig weekendmad til friske salater og søde fristelser. <br> <br> Vi har også sjove opskrifter til børn — pizzasnegle, pandekager og små bageprojekter for hele familien. Om du søger nemme retter, sæsonens råvarer eller idéer til middage med venner, finder du masser af inspiration og opskrifter, der gør madlavningen sjovere.
+            </p>
+          </figcaption>
+          <img
+            src="./assets/images/Dame_i_køkken_med_computer.png"
+            alt="Dame der kigger på en opskrift på sin computer ude i et køkken"
+          />
+        </figure>
+      </section>
+
+      <section class="opskriftOversigtWrapper">
+        <div class="searchbar">
+          <input type="search" id="search" name="search" placeholder="søg..." />
+          <!-- Forstørrelsesglas inde på vores søgefelt, ikon, tilgængelig her: https://fontawesome.com/icons/heart?f=classic&s=solid [Senest besøgt: 22-04-2025]. -->
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
+        <section class="results">
+          <aside>
+            <div>
+              <h3>Filtrér</h3>
+              <h4>Måltidstyper/faser</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Morgenmad"
+                  value="Morgenmad"
+                  id="10"
+                />
+                Morgenmad
+              </label>
+              <label>
+                <input type="checkbox" name="Frokost" value="Frokost" id="11" />
+                Frokost
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Aftensmad"
+                  value="Aftensmad"
+                  id="12"
+                />
+                Aftensmad
+              </label>
+              <label>
+                <input type="checkbox" name="Forret" value="Forret" id="13" />
+                Forret
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Hovedret"
+                  value="Hovedret"
+                  id="14"
+                />
+                Hovedret
+              </label>
+              <label>
+                <input type="checkbox" name="Dessert" value="Dessert" id="15" />
+                Dessert
+              </label>
+
+              <h4>Sværhedsgrad og tid</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Begynder"
+                  value="Begynder"
+                  id="16"
+                />
+                Begynder
+              </label>
+              <label>
+                <input type="checkbox" name="Moderat" value="Moderat" id="17" />
+                Moderat
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Avanceret"
+                  value="Avanceret"
+                  id="18"
+                />
+                Avanceret
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="0-30 min"
+                  value="0-30 min"
+                  id="19"
+                />
+                0-30 min
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="30-60 min"
+                  value="30-60 min"
+                  id="20"
+                />
+                30-60 min
+              </label>
+              <label>
+                <input type="checkbox" name="60 min+" value="60 min+" id="21" />
+                60 min+
+              </label>
+
+              <h4>Sortering</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Bedst bedømte"
+                  value="Bedst bedømte"
+                  id="22"
+                />
+                Bedst bedømte
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Mest populære"
+                  value="Mest populære"
+                  id="23"
+                />
+                Mest populære
+              </label>
+              <label>
+                <input type="checkbox" name="Nyeste" value="Nyeste" id="24" />
+                Nyeste
+              </label>
+
+              <h4>Cuisine</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Amerikansk"
+                  value="Amerikansk"
+                  id="25"
+                />
+                Amerikansk
+              </label>
+              <label>
+                <input type="checkbox" name="Engelsk" value="Engelsk" id="28" />
+                Engelsk
+              </label>
+              <label>
+                <input type="checkbox" name="Fransk" value="Fransk" id="32" />
+                Fransk
+              </label>
+              <label>
+                <input type="checkbox" name="Indisk" value="Indisk" id="29" />
+                Indisk
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Italiensk"
+                  value="Italiensk"
+                  id="34"
+                />
+                Italiensk
+              </label>
+              <label>
+                <input type="checkbox" name="Japansk" value="Japansk" id="30" />
+                Japansk
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Kinesisk"
+                  value="Kinesisk"
+                  id="33"
+                />
+                Kinesisk
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Mexicansk"
+                  value="Mexicansk"
+                  id="26"
+                />
+                Mexicansk
+              </label>
+              <label>
+                <input type="checkbox" name="Spansk" value="Spansk" id="31" />
+                Spansk
+              </label>
+              <label>
+                <input type="checkbox" name="Svensk" value="Svensk" id="35" />
+                Svensk
+              </label>
+              <label>
+                <input type="checkbox" name="Thai" value="Thai" id="27" />
+                Thai
+              </label>
+
+              <h4>Kost Præference</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Canivore"
+                  value="Canivore"
+                  id="40"
+                />
+                Canivore
+              </label>
+              <label>
+                <input type="checkbox" name="Halal" value="Halal" id="42" />
+                Halal
+              </label>
+              <label>
+                <input type="checkbox" name="Helse" value="Helse" id="41" />
+                Helse
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Omnivore"
+                  value="Omnivore"
+                  id="36"
+                />
+                Omnivore
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Pesktarisk"
+                  value="Pesktarisk"
+                  id="39"
+                />
+                Pesktarisk
+              </label>
+              <label>
+                <input type="checkbox" name="Vegansk" value="Vegansk" id="37" />
+                Vegansk
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Vegetarisk"
+                  value="Vegetarisk"
+                  id="38"
+                />
+                Vegetarisk
+              </label>
+
+              <h4>Allergener</h4>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Glutenfri"
+                  value="Glutenfri"
+                  id="43"
+                />
+                Glutenfri
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Laktosefri"
+                  value="Laktosefri"
+                  id="44"
+                />
+                Laktosefri
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Mælkefri"
+                  value="Mælkefri"
+                  id="45"
+                />
+                Mælkefri
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  name="Nøddefri"
+                  value="Nøddefri"
+                  id="46"
+                />
+                Nøddefri
+              </label>
+              <input type="reset" value="Nulstil filter" id="reset" />
+            </div>
+          </aside>
+
+          <section class="recipeCard">
+            <!-- <div>
+            <img src="" alt="">
+            Hjerte-ikon brugt til like retter, ikon, tilgængelig her: https://fontawesome.com/icons/heart?f=classic&s=solid [Senest besøgt: 16-04-2025]. -->
+            <i class="fa-solid fa-heart white-heart"></i>
+            <i class="fa-solid fa-heart red-heart"></i>
+            <p></p>
+            <h3></h3>
+          </div> -->
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <div class="footerSider">
+          <a href="omOs.html">Om os</a><a href="omOs.html">FAQ</a
+          ><a href="#">Cookies</a>
+        </div>
+        <p>All rights reserved to Group 6 TM</p>
+      </div>
+
+      <div>
+        <div class="footerSocials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Jankagevej 69, 9000 Aalborg, Janmark</p>
+      </div>
+    </footer>
+  </body>
 </html>

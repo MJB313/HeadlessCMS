@@ -8,6 +8,7 @@
   /* Farver */
   --lightOrange: #ffb365;
   --darkOrange: #eca55d;
+  --lightGray: #565656;
 
 
     /* Spacere */
@@ -46,6 +47,11 @@ body {
   line-height: 150%;
 }
 
+main {
+    overflow-y: scroll;
+}
+
+
 h1,
 h2,
 h3,
@@ -53,6 +59,11 @@ h4,
 h5,
 h6 {
   font-family: "Lora", serif;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: 150%;
 }
 
 /* FORSIDE STYLES HER */
@@ -81,7 +92,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -110,7 +121,6 @@ header div p {
 }
 
 .heroVideo {
-  background-color: red;
   height: 85vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -161,7 +171,7 @@ header div p {
 
 .forsideOpskriftsamling h2 {
   font-size: var(--fs-h2);
-  margin-bottom: 4rem;
+  line-height: 150%;
   color: white;
 }
 
@@ -203,7 +213,6 @@ header div p {
   color: rgb(255, 255, 255);
   font-size: var(--fs-cardTitle);
   text-align: center;
-  align-content: center;
 }
 
 .forsideCardWrapper a:hover {
@@ -316,6 +325,8 @@ footer {
   color: white;
 }
 
+
+
 .footerSider {
   margin-bottom: 2rem;
 }
@@ -343,596 +354,204 @@ footer i {
 /* OPSKRIFT OVERSIGT STYLES HER */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ul.breadcrumb {
+    padding: 1rem var(--generalSpacer);
+    list-style: none;
+    background-color: white;
+    background-color: var(--darkOrange);
+    justify-content: start;
+    width: 100%;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: var(--fs-text);
+}
+
+ul.breadcrumb li+li:before {
+    padding: 1rem;
+    color: white;
+    content: ">\00a0";
+}
+
+ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb li:last-child a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.breadcrumb li:first-child a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.opskrift_intro {
+    padding: 2rem var(--generalSpacer);
+    background-color: var(--lightOrange);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+}
+
+
+
+.opskrift_intro h1 {
+    font-size: var(--fs-h1);
+    color: white;
+    line-height: 150%;
+
+}
+
+.opskrift_intro p {
+    font-size: var(--fs-text);
+    color: white;
+    width: 55ch;
+    line-height: 150%;
+}
+
+.opskrift_intro img {
+    width: 100%;
+}
+
+.opskriftOversigtWrapper{
+    width: 100%;
+}
+
+.results {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+    grid-template-columns: 20% 80%;
+}
+
+.searchbar {
+    width: 100%;
+    padding-inline: var(--generalSpacer);
+    display: flex;
+    justify-content: end;
+    margin-block: 2rem 1rem;
+    height: 2.5rem;
+    position: relative;
+}
+
+
+.searchbar input {
+    border-radius: 20px;
+    padding-left: 1rem;
+}
+
+.searchbar i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 110px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.recipeCard {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-content: flex-end;
+    max-height: 200px;
+    padding-inline: var(--generalSpacer);
+}
+
+
+.recipeCard div {
+    position: relative;
+}
+
+.recipeCard p {
+    color: var(--lightGray);
+    font-size: var(--fs-cardDetails);
+}
+
+.recipeCard h3 {
+    font-size: var(--fs-cardTitle);
+    margin-bottom: 0.5rem;
+}
+
+.recipeCard img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+
+.fa-heart {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+
+.fa-heart.liked {
+    color: red;
+    animation: pop 0.5s ease;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+aside {
+    grid-template-columns: 1fr;
+}
+
+aside div {
+    display: grid;
+    gap: 10px;
+}
+
+aside label {
+    margin: 0;
+    padding: 0;
+    font-size: var(--fs-text);
+}
+
+aside h3 {
+    font-size: var(--fs-cardTitle);
+}
+
+aside h4 {
+    margin-top: 1rem;
+}
+
+#reset {
+    background-color: var(--lightOrange);
+    color: white;
+    border: none;
+    padding-block: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
+    cursor: pointer;
+}
 
 
 
@@ -978,21 +597,6 @@ footer i {
   display: block;
 }
 
-.opskrift_intro {  
-  color: white;
-  font-size: 35px;
-  background-color: #ffb365;
-  height: 485px;
-  padding-top: 2rem;
-  padding-left: 4rem;
-}
-
-.opskrift_intro p {
-  padding-top: 2rem;
-  line-height: 30px;
-  width: 55ch;
-  font-size: var(--fs-text);
-}
 
 .opskrift_intro h1 {
     font-size: var(--fs-h1);
@@ -1060,7 +664,7 @@ footer i {
 }
 
 .opskrift_fremgangsmåde p {
-  font-size: 1.25;
+  font-size: var(--fs-text);
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: 1rem;
@@ -1169,7 +773,6 @@ footer i {
 .opskrift_card_time {
   font-size: 0.9rem;
   margin: 0;
-  align-self: left;
 }
 
 .opskrift_card_info {
@@ -1178,7 +781,7 @@ footer i {
 }
 
 .opskrift_card_title {
-  font-size: var();
+  font-size: var(--fs-cardTitle);
   margin: 8px 0 0;
 }
 
@@ -1191,246 +794,6 @@ footer i {
   text-decoration: underline;
   text-decoration-color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1463,8 +826,9 @@ a:hover{
 }
 
 /* Intro section styling */
-.inspirationIntroBox{
+.inspirationIntroBox figure{
     display: flex;
+    gap: 3rem;
     justify-content: space-between;
     padding-left: var(--generalSpacer);
     padding-right: var(--generalSpacer);
@@ -1474,36 +838,36 @@ a:hover{
     background-color: #FFB365;
     height: 500px;
 }
-.inspirationIntroBox>figcaption>h1{
+.inspirationIntroBox h1{
     font-size: var(--fs-h1);
     line-height: 150%;
 }
 
-.inspirationIntroBox>figcaption>p{
+figure figcaption p{
     font-size: var(--fs-text);
-    max-width: 720px;
     line-height: 150%;
 }
 
-.inspirationIntroBox>figure>img{
-    width: 620px;
+figure img{
+    width: 50%;
     height: 420px;
     object-fit: cover;
 }
 
+figure {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    width: 100%;
+}
 
 /* Styling af indhold */
-figure>img{
-    max-width: 620px;
+
+figcaption h2 {
+    font-size: var(--fs-h2);
+    line-height: 150%;
 }
 
-figcaption{
-    margin-right: 2rem;
-}
-section.inspirationSection:nth-child(odd) {
-    background-color: var(--lightOrange);
-    color: white;
-}
 
 .inspirationSection{
 padding: var(--generalSpacer);
@@ -1513,7 +877,7 @@ padding: var(--generalSpacer);
     justify-content: space-between;
 }
 
-.inspirationInfoSection>figcaption>p{
+figcaption>p{
     font-size: var(--fs-text);
     margin-top: 1rem;
     max-width: 720px;
@@ -1531,6 +895,8 @@ padding: var(--generalSpacer);
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
+    text-align: center;
+    font-size: var(--fs-cardTitle);
 }
 
 .inspirationCard{
@@ -1545,7 +911,7 @@ padding: var(--generalSpacer);
     padding: .3rem;
     width: 250px;
     height: 70px;   
-    font-size: var(--fs-text);
+    font-size: var(--fs-cardTitle);
 }
 
 
@@ -1651,10 +1017,7 @@ a:hover {
 .omOsIntroBox {
     display: flex;
     justify-content: space-between;
-    padding-left: var(--generalSpacer);
-    padding-right: var(--generalSpacer);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem var(--generalSpacer);
     color: white;
     background-color: #FFB365;
     height: 500px;
@@ -1673,10 +1036,10 @@ a:hover {
 }
 
 .omOsIntroBox>figure>img{
-    width: 620px;
+    width: 50%;
     height: 420px;
     object-fit: cover;
-    object-position: 100% bottom;
+    object-position: top;
 }
 
 
