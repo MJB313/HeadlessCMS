@@ -47,10 +47,258 @@ h6 {
 
 /* FORSIDE STYLES HER */
 
+<<<<<<< HEAD
+=======
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+    background-color: red;
+    width: 100%;
+
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 60%;
+    margin: 0 auto;
+}
+
+#logo{
+    font-size: var(--fs-h2);
+    font-family: "Lora", serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4b21dc86ccddeb567e7e35cd94672e5f28ac4c5f
 /* OPSKRIFT OVERSIGT STYLES HER */
 
+.opskrift_intro {
+    padding: var(--generalSpacer);
+    background-color: var(--lightOrange);
+    /* display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2; */
+}
 
+.opskrift_intro h1 {
+    font-size: var(--fs-h1);
+    color: white;
+}
 
+.opskrift_intro p {
+    font-size: var(--fs-text);
+    /* width: 65ch; */
+    color: white;
+}
+
+.opskrift_intro img {
+    width: 150px;
+}
+
+.opskrift_intro p, img {
+    display: flex;
+}
 
 
 
