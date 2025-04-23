@@ -998,16 +998,16 @@ footer i {
     font-size: var(--fs-h1);
 }
 
-.opskrift_tid {
+.opskrift_tid p{
   display: flex;
   align-items: center;
-  gap: 4rem;
 }
 
 .opskrift_tid_span {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin-right: 7rem;
 }
 
 /* OPSKRIFT FREMGANGSMÅDE OG INGREDIENS LIST */
