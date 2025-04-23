@@ -1,271 +1,51 @@
 /* TYPOGRAPHY */
 /* ___________________________________ */
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 
 /* VARIABLES */
 /* ___________________________________ */
 :root {
+  /* Farver */
+  --lightOrange: #ffb365;
+  --darkOrange: #eca55d;
 
-    /* Farver */
-    --lightOrange: #FFB365;
-    --darkOrange: #ECA55D;
+  /* Spacere */
+  --generalSpacer: 90px;
+  --largeSpacer: 180px;
 
-    /* Spacere */
-    --generalSpacer: 90px;
-    --largeSpacer: 180px;
-
-
-    /* font sizes */
-    --fs-cardDetails: 0.875rem;
-    --fs-cardTitle: 1.5rem;
-    --fs-breadcrumbs: 1.25rem;
-    --fs-text: 1.25rem;
-    --fs-h1: 4rem;
-    --fs-h2: 2.25rem;
-
+  /* font sizes */
+  --fs-cardDetails: 0.875rem;
+  --fs-cardTitle: 1.5rem;
+  --fs-breadcrumbs: 1.25rem;
+  --fs-text: 1.25rem;
+  --fs-h1: 4rem;
+  --fs-h2: 2.25rem;
 }
-
 
 /* GENERAL STYLING */
 /* ___________________________________ */
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Lato", sans-serif;
-    line-height: 150%;
+  font-family: "Lato", sans-serif;
+  line-height: 150%;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: "Lora", serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", serif;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FORSIDE STYLES HER */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* OPSKRIFT OVERSIGT STYLES HER */
 
@@ -465,405 +245,613 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 /* OPSKRIFT STYLES HER */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* KASPER */
+/*  */
+
+/* Breadcrumbs */
+
+.opskrift_breadcrumbs {
+  background-color: #eca55d;
+  height: 69px;
+  color: white;
+  padding: 20px;
+  padding-left: 4rem;
+}
+
+.opskrift_breadcrumbs a {
+  color: white;
+  text-decoration: none;
+}
+
+.opskrift_breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+/* OPSKRIFTENS HERO BILLEDE/TEKST */
+
+.opskrift_container {
+  display: flex;
+}
+
+.opskrift_intro .opskrift_container {
+  gap: 125px;
+}
+
+.opskrift_intro img {
+  width: 620px;
+  height: auto;
+  display: block;
+}
+
+.opskrift_intro {  
+  color: white;
+  font-size: 35px;
+  background-color: #ffb365;
+  height: 485px;
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+
+.opskrift_intro p {
+  padding-top: 2rem;
+  line-height: 30px;
+  width: 55ch;
+  font-size: var(--fs-text);
+}
+
+.opskrift_intro h1 {
+    font-size: var(--fs-h1);
+}
+
+.opskrift_tid {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.opskrift_tid_span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* OPSKRIFT FREMGANGSMÅDE OG INGREDIENS LIST */
+
+
+/* Opskirft serveringer */
+.opskrift_serveringer {
+  margin-bottom: 3rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+/* Ingredienser */
+
+
+.ingrediens_column p {
+  padding-right: 0;
+  font-size: 1.25rem;
+  max-width: 420px;
+}
+
+.ingrediens_column {
+  padding-top: 0rem;
+  padding-bottom: 0;
+  
+
+}
+
+.ingrediens_column_overskrift {
+  margin-left: 50vw;
+  padding-left: 0.75rem;
+  
+}
+
+/* Fremgangsmåde */
+
+.step_text {
+    font-size: var(--fs-text);
+}
+
+.opskrift_container .fremgangsmåde_column h1 {
+  padding-bottom: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.fremgangsmåde_column {
+  position: absolute;
+}
+
+.opskrift_fremgangsmåde {
+  margin-left: var(--generalSpacer);
+}
+
+.opskrift_fremgangsmåde p {
+  font-size: 1.25;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+  width: 74ch;
+}
+
+.recipe-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 74ch;
+}
+
+.opskrift_step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.opskrift_step input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #888;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+
+.opskrift_step:has(input[type="checkbox"]:checked) .step_text {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+
+.opskrift_step input[type="checkbox"]:checked {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.opskrift_step input[type="checkbox"]::before {
+  content: "✔";
+  color: white;
+  font-size: var(--fs-text);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.opskrift_step input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.step_text.checked {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.opskrift_step label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.opskrift_select p {
+  font-size: var(--fs-text);
+}
+
+/* OPSKRIFT CARDS */
+
+.opskrift_cards {
+  display: flex;
+  margin-top: 18rem;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 2rem;
+}
+
+.opskrift_card p {
+  color: white;
+}
+
+.opskrift_card {
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #eca55d;
+  color: white;
+  margin-top: 10rem;
+}
+
+.opskrift_card_image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.opskrift_card_time {
+  font-size: 0.9rem;
+  margin: 0;
+  align-self: left;
+}
+
+.opskrift_card_info {
+  padding: 15px;
+  text-align: left;
+}
+
+.opskrift_card_title {
+  font-size: var();
+  margin: 8px 0 0;
+}
+
+.opskrift_card a {
+  text-decoration: none;
+  color: white;
+}
+
+.opskrift_card a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
 
 /* INSPIRATION STYLES HER */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* OM OS STYLES HER */

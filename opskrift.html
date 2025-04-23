@@ -7,6 +7,292 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="./assets/js/app.js" defer></script>
     <meta name="description" content="" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="logo"><p class="logo">Madkompasset</p></a>
+        <ul>
+          <a href="index.html">
+            <li>Forside</li>
+          </a>
+          <a href="opskriftOversigt.html">
+            <li>Opskrifter</li>
+          </a>
+          <a href="inspiration.html">
+            <li>Inspiration</li>
+          </a>
+          <a href="omOs.html">
+            <li>Om os</li>
+          </a>
+        </ul>
+        <a href="#">
+          <div>
+            <img src="./assets/images/Login ikon.png" alt="Login ikon" />
+            <p>Log in</p>
+          </div>
+        </a>
+      </nav>
+    </header>
+
+    <main class="opskrift">
+      <section class="opskrift_breadcrumbs">
+        <div>
+          <p>
+            <a href="./index.html">Forside</a> &gt;
+            <a href="./opskriftOversigt.html">Opskrift Oversigt</a> &gt;
+            <a href="./opskrift.html">Elmo Fødselsdagskage</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="opskrift_intro">
+        <div class="opskrift_container">
+          <div>
+            <h1>Elmo Fødselsdagskage</h1>
+            <p class="opskrift_tid">
+              <span class="opskrift_tid_span">
+                <span class="material-icons">timer</span> Tid: 2t 30 min
+              </span>
+              <span class="opskrift_tid_span">
+                <span class="material-icons">stairs</span> Sværhedsgrad: Medium
+              </span>
+            </p>
+            <p>
+              Min søn elsker Sesame Street, så til hans anden fødselsdag gik vi
+              all-in og lavede en stor fest med spil og dekorationer relateret
+              til Sesame Street. Hans absolutte yndlingsfigur er Elmo, så denne
+              kage var et "must bake".Elmo Fødselsdagskage, efter min mening, er
+              bedst som en rød fløjlskage. Denne opskrift giver en stor, fugtig
+              kage, som vil få børn til at komme tilbage for at tage en portion
+              mere. For at bage denne kage, skal du bruge en Elmo Kageform. Jeg
+              anbefaler også stærkt at bruge rød madfarvegelé i stedet for
+              almindelig madfarve, da det giver en meget stærkere farve.
+            </p>
+          </div>
+          <div>
+            <img src="./assets/images/elmo-birthday-cake_large.webp" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="opskrift_fremgangsmåde">
+        <div class="opskrift_serveringer">
+          <label for="serving-count">Indtast antal personer:</label>
+          <input
+            type="number"
+            id="serving-count"
+            placeholder="F.eks. 16"
+            min="1"
+            onchange="updateRecipe()"
+          />
+        </div>
+
+        <div class="opskrift_container">
+          <div class="fremgangsmåde_column">
+            <h1>Fremgangsmåde</h1>
+
+            <div class="recipe-steps">
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Fjern smørret og æggene fra køleskabet og lad dem komme op på
+                  stuetemperatur.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Forvarm ovnen til 175°C. Smør Elmo-kageformen generøst med
+                  smør. Drys med mel og bank overskydende mel ud. Sæt til
+                  side.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Sigt mel, salt, bagepulver og natron sammen i en mellemstor
+                  skål. Sæt til side.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >I en lille skål, pisk kakao, rød madfarve og vand sammen,
+                  indtil det er glat. Sæt til side.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >I en stor skål, pisk smørret med en elektrisk håndmixer
+                  (eller en stander-mixer med paddel-vedhæng) på medium
+                  hastighed, indtil det er cremede, ca. 1 minut.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Tilsæt æggene et ad gangen og pisk indtil de er blandet, ca.
+                  30 sekunder pr. æg. Tilsæt vaniljeekstrakt sammen med et af
+                  æggene.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Tilsæt sukkeret lidt ad gangen, ½ kop ad gangen, og pisk
+                  indtil det er godt blandet, ca. 30 sekunder for hver
+                  tilføjelse. Når alt sukkeret er tilsat, skrab siderne af
+                  skålen og pisk indtil blandingen er lys og luftig, ca. 2
+                  minutter.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >På lav hastighed, skift mellem at tilsætte 1 kop af
+                  melblandingen og ⅓ kop kærnemælk, og pisk godt efter hver
+                  tilsætning. Skrab siderne af skålen efter behov og gentag
+                  indtil alt er blandet. Når dejen er klar, giv den et par
+                  hurtige omgange med en dejskraber for at sikre, at alle
+                  ingredienser er blandet godt.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Hæld dejen i den forberedte Elmo-kageform. Bag ved 175°C i
+                  ca. 40-50 minutter, indtil toppen af kagen er let brunet, og
+                  en tandstik i midten kommer ud ren.</span
+                >
+                <input type="checkbox" />
+              </label>
+
+              <label class="opskrift_step">
+                <span class="step_text"
+                  >Fjern kagen fra ovnen og lad den køle af i formen på en
+                  bagerist i 10 minutter. Vend kagen ud af formen og lad den
+                  køle helt af på risten, mindst 1 time, før den
+                  dekoreres.</span
+                >
+                <input type="checkbox" />
+              </label>
+            </div>
+          </div>
+          <div class="ingrediens_column_overskrift">
+            <h1>Ingredienser</h1>
+            <div id="recipe-ingredients" class="ingrediens_column">
+              <p>2 stænger smør, ved stuetemperatur</p>
+
+              <p>3 store æg</p>
+
+              <p>2 teskefulde flormelis</p>
+
+              <p>2 spiseskefulde smør</p>
+
+              <p>2 spiseskefulde mel</p>
+
+              <p>311 g kagehvedemel, sigtet (ca. 2 ¾ kopper)</p>
+
+              <p>2 teskefulde fint salt</p>
+
+              <p>2 teskefulde bagepulver</p>
+
+              <p>¼ teskefuld natron</p>
+
+              <p>
+                1 teskefuld rød madfarvegelé eller 85 g almindelig rød madfarve
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="opskrift_cards">
+        <div class="opskrift_card">
+          <a href="">
+            <img
+              src="./assets/images/gingerbread-cookies_large.webp"
+              alt=""
+              class="opskrift_card_image"
+            />
+            <div class="opskrift_card_info">
+              <p class="card_time">Tid: 35 min | Sværhedsgrad: let</p>
+              <p class="card_title">Low-Carb havregrynspandekager</p>
+            </div>
+          </a>
+        </div>
+        <div class="opskrift_card">
+          <a href="">
+            <img
+              src="./assets/images/big-bird-birthday-cake_large.webp"
+              alt=""
+              class="opskrift_card_image"
+            />
+            <div class="opskrift_card_info">
+              <p class="card_time">Tid: 35 min | Sværhedsgrad: let</p>
+              <p class="card_title">Low-Carb havregrynspandekager</p>
+            </div>
+          </a>
+        </div>
+        <div class="opskrift_card">
+          <a href="">
+            <img
+              src="./assets/images/french-vanilla-ice-cream_large.webp"
+              alt=""
+              class="opskrift_card_image"
+            />
+            <div class="opskrift_card_info">
+              <p class="card_time">Tid: 35 min | Sværhedsgrad: let</p>
+              <p class="card_title">Low-Carb havregrynspandekager</p>
+            </div>
+          </a>
+        </div>
+        <div class="opskrift_card">
+          <a href="">
+            <img
+              src="./assets/images/low-carb-oatmeal-pancakes_large-1.webp"
+              alt=""
+              class="opskrift_card_image"
+            />
+            <div class="opskrift_card_info">
+              <p class="opskrift_card_time">Tid: 35 min | Sværhedsgrad: let</p>
+              <p class="opskrift_card_title">Low-Carb havregrynspandekager</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <div class="footerSider">
+          <a href="omOs.html">Om os</a><a href="omOs.html">FAQ</a
+          ><a href="#">Cookies</a>
+        </div>
+        <p>All rights reserved to Group 6 TM</p>
+      </div>
+
+      <div>
+        <div class="footerSocials">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p>Jankagevej 69, 9000 Aalborg, Janmark</p>
+      </div>
+    </footer>
+  </body>
 </html>
